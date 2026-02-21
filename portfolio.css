@@ -1,0 +1,84 @@
+header{
+    display: flex;
+    margin: 30px 20px;
+}
+.menu{
+    margin-left: 700px;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    gap: 90px;
+}
+.menu a{
+    text-decoration: none;
+}
+.menu a:hover{
+    text-decoration:underline;
+}
+img{
+    width: 100px;
+    border-radius: 700px;
+    margin-left: 700px;
+}
+.about{
+    margin: 0 20px;
+    text-align: center;
+    margin-bottom:50px ;
+}
+#ab{
+    text-align: center;
+    color: blue;
+}
+#ab:hover{
+    text-decoration: underline;
+}
+#para{
+    padding-top: 10px;
+    text-align: center;
+    padding: 0 90px;
+}
+#sk{
+    text-align: center;
+    color: blue;
+}
+#sk:hover{
+    text-decoration: underline;
+}
+.skill h3{
+    margin-left: 450px; 
+    
+}
+#pro{
+    text-align: center;
+    color:blue
+}
+#pro:hover{
+    text-decoration: underline;
+}
+#btn {
+    display: flex;
+    margin-bottom: 100px;
+}
+h4 button {
+    margin-left: 400px;
+    padding: 15px;
+    border-radius: 90px;
+    text-decoration: none;
+    
+}
+ button a{
+    text-decoration: none;
+}
+button:hover{
+    background-color: aquamarine;
+}
+
+
+
+    
+
+
+
+
