@@ -1,0 +1,166 @@
+<form action="" id="registerform">
+         <link rel="stylesheet" href="form.css">
+    <center><h1>REGISTRATION FORM</h1></center>
+    <table>
+        <tr>
+        <br><td><label for="">Name of the candidate </td></label>
+        <td>:</td>
+        <td><input type="text"id="username" placeholder="First Name"required ></td>
+        </tr>
+        <tr>
+        <br><td><label for="">Father's name </td></label>
+        <td>:</td>
+        <td><input type="text"id="name" required></td></br>
+        </tr>
+        <tr>
+        <br><td><label for="">Date of birth </td></label>
+        <td>:</td>
+        <td><input type="date"id="dob"required></td></br>
+        </tr>
+        <tr>
+        <td><br><label for="number">Mobile no </td></label>
+        <td>:</td>
+        <td><select>
+            <option>+94</option>
+            <option>+255</option>
+            <option>+86</option>
+            <option>+91</option>
+            <option>+39</option>
+            <option>+44</option>
+            <option>+212</option>
+        </select></td>
+        <td><input type="tel"id="mobile"required></br></td>
+        </tr>
+        <tr>
+        <td><br><label for="email">Email id </td></label>
+        <td>:</td>
+        <td><input type="email"id="email"required></td></br>
+        </tr>
+        <tr>
+        <td><br><label for="">Gender </td></label>
+        <td>:</td>
+        <td><input type ="radio"name="gender"id="gender"required >
+        <label for="">Male</label></td>
+        <td><input type="radio"name="gender"id="gender"required>
+        <label for="" id="gender">Female</label></td></br>
+        </tr>
+        <tr>
+        <td><br><label for="">Course </td></label>
+        <td>:</td>
+        <td><select id="course"required>
+            <option value=""disabled selected>--------Select any Course--------</option>
+            <option>Fullstack Web Development</option>
+            <option>Dotnet</option>
+            <option>Java Developer</option>
+            <option>AI</option>
+            <option>Tally Prime</option>
+            <option>MS Excel</option>
+            <option>Income Tax</option>
+            <option>GST</option>
+        </select></td></br>
+        </tr>
+        <tr>
+        <td><br><label for="">Student Photo </label>
+        <td>:</td>
+        <td><input type="file"id="photo" placeholder="Choose file"required></br></td>
+        </tr>
+        <tr>
+        <td><br><label for="city">City </td></label>
+        <td>:</td>
+        <td><select id="city" required>
+            <option value=""disabled selected>-----Choose city----</option>
+            <option>Afghanistan</option>
+            <option>Algeria</option>
+            <option>Bangladesh</option>
+            <option>Brazil</option>
+            <option>Canada</option>
+            <option>Egypt</option>
+            <option>Germany</option>
+            <option>India</option>
+            <option>Indonesia</option>
+            <option>Mexico</option>
+            <option>Russia</option>
+        </select></br></td>
+    </tr>
+        <tr>
+        <td><b><button id="btn1">Submit</button></b></td>
+        <td><button id="btn2">Reset</button></td>
+        </tr>
+</table>
+</form>
+
+<div id="sub"></div>
+<script>
+    let sub=document.getElementById("sub")
+    let form=document.getElementById("registerform")
+    form.addEventListener("submit",(e)=>{
+        const errors=[];
+        e.preventDefault()
+    let username=document.getElementById("username").value;
+    let name=document.getElementById("name").value;
+    let dob=document.getElementById("dob").value;
+    let mobile=document.getElementById("mobile").value;
+    let email=document.getElementById("email").value;
+    let gender=document.querySelector("input[name='gender']:checked").value;
+    let course=document.getElementById("course").value;
+    let photo=document.getElementById("photo").value;
+    let city=document.getElementById("city").value;
+    console.log(
+                 `username : ${username} , name: ${name} , dob: ${dob}, 
+                 mobile: ${mobile} , email: ${email} , course: ${course},
+                 photo: ${photo} , city: ${city}`
+    );
+    function checkUsername(usernamename){
+            let chars = "1234567890@#!$%^&*()[]{}+=-_/?.><,";
+            for (letter of username){ 
+                if (chars.includes(letter)){
+                    return "Special character and Numbers are not allowed in UserName"
+                }
+            }
+            return "valid"
+        };
+         let answer1 = checkUsername(username);
+        if ( answer1 != "valid"){
+            errors.push(answer1);
+        }
+    function checkName(name){
+            let chars = "1234567890@#!$%^&*()[]{}+=-_/?.><,";
+            for (letter of name){ 
+                if (chars.includes(letter)){
+                    return "Special character and Numbers are not allowed in Name"
+                }
+            }
+            return "valid"
+        };
+         let answer2 = checkName(name);
+        if ( answer2 != "valid"){
+            errors.push(answer2);
+        }
+        function checkMobile(mobile){
+        if(mobile.length<10||mobile.length>10){
+            return "Mobile number should not be more than 10 and not less than 10 characters"
+        }else{
+            return"valid"
+        }
+        }
+        let answer4=checkMobile(mobile);
+        if(answer4!="valid"){
+           errors.push(answer4);
+        }
+       if (errors.length > 0){
+            for (error of errors){
+                let para = document.createElement('p');
+                para.textContent = error ;
+                para.style.color = "red";
+                sub.appendChild(para);
+            }
+        }else{
+            sub.textContent="Form submitted successfully!";
+            sub.style.color="green";
+            e.target.reset();
+        }
+        
+    });
+
+    
+</script>
