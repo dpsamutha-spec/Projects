@@ -2,7 +2,7 @@ body{
     background-color: #f5f7fa;
     flex-wrap: wrap;
 }
-    header{
+header{
     display: flex;
     margin: 30px 20px;
 }
@@ -25,6 +25,12 @@ img{
     width: 100px;
     border-radius: 700px;
     margin-left: 700px;
+}
+h2 button{
+    margin-right: 200px; 
+    margin-left: 200px;
+    padding:10px;
+    border-radius: 30px;
 }
 .about{
     margin: 0 20px;
@@ -91,16 +97,29 @@ img{
     color: #f5f7fa;
     font-size: larger;
 }
-#edu{
+.edu{
     text-align: center;
     color: blue;
 }
-#edu:hover{
-    text-decoration: underline;
-}
-#edu p{
+#edu1 p{
     text-align: left;
     color: black;
+    font-size: 20px;
+}
+#edu1 h3{
+    text-align: left;
+    color: black;
+    font-size: 30px;
+}
+#edu2 p{
+    text-align: left;
+    color: black;
+    font-size: 20px;
+}
+#edu2 h3{
+    text-align: left;
+    color: black;
+    font-size: 30px;
 }
 
 #pro{
