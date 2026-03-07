@@ -1,12 +1,16 @@
-header{
+body{
+    background-color: #f5f7fa;
+    flex-wrap: wrap;
+}
+    header{
     display: flex;
     margin: 30px 20px;
 }
 .menu{
-    margin-left: 700px;
+    margin-left: 650px;
     text-decoration: none;
     border: 1px solid black;
-    padding: 20px;
+    padding: 30px;
     border-radius: 30px;
     display: flex;
     gap: 90px;
@@ -27,6 +31,9 @@ img{
     text-align: center;
     margin-bottom:50px ;
 }
+.about h1{
+    font-size: 40px;
+}
 #ab{
     text-align: center;
     color: blue;
@@ -34,22 +41,68 @@ img{
 #ab:hover{
     text-decoration: underline;
 }
-#para{
+#para h2{
     padding-top: 10px;
-    text-align: center;
     padding: 0 90px;
 }
-#sk{
+.skill h1{
+    text-align: center; 
+    color: blue;
+}
+.skill h1:hover{
+    text-decoration: underline;
+}
+.skill-bar div{
+    width: 90%;
+    background-color: blue;
+    height: 20px;
+    border-radius: 30px;
+    border: 1px solid black;
+}
+#html{
+    width: 90%;
+    text-align: center;
+    color: white;
+    font-size: larger;
+    background-color: orange;
+}
+#css{
+    width:80%;
+    text-align: center;
+    background-color: aqua;
+    font-size: larger;
+}
+#javascript{
+    width: 60%;
+    text-align: center;
+    background-color: yellow;
+    font-size: larger;
+}
+#python{
+    width:40%;
+    text-align: center;
+    color: #f5f7fa;
+    font-size: larger;
+    background-color: green;
+}
+#excel{
+    width: 80%;
+    text-align: center;
+    color: #f5f7fa;
+    font-size: larger;
+}
+#edu{
     text-align: center;
     color: blue;
 }
-#sk:hover{
+#edu:hover{
     text-decoration: underline;
 }
-.skill h3{
-    margin-left: 450px; 
-    
+#edu p{
+    text-align: left;
+    color: black;
 }
+
 #pro{
     text-align: center;
     color:blue
